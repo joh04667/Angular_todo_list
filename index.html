@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>anguuuuuuuuuuuuuuuular!</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="MainController">
+
+    <div class="input">
+      <input class="taskinput" type="text" ng-model="todoInput"/>
+      <button ng-click="add()">Add</button>
+    </div>
+
+    <div class="tasks">
+      <div ng-repeat="task in tasks track by $index">
+        <input type="checkbox" ng-model="task.done">{{task.text}}
+      </div>
+    </div>
+
+    <button ng-click="remove()">Remove Selected</button>
+
+  </body>
+</html>
