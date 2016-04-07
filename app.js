@@ -3,7 +3,7 @@ var app = angular.module("myApp", []);
 app.controller("MainController", function($scope) {
 
   // initial array population
-  $scope.tasks = [{text:'wash clothe', done:false},{text:'CSS for this page?', done:false}];
+  $scope.tasks = [{text:'wash clothes', done:false},{text:'CSS for this page?', done:false}];
 
 
 // adds task from input to ng-repeated list

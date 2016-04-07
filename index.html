@@ -10,7 +10,7 @@
   <body ng-controller="MainController">
 
     <div class="input">
-      <input class="taskinput" type="text" ng-model="todoInput"/>
+      <input ng-keyup="$event.keyCode == 13 && add()" class="taskinput" type="text" ng-model="todoInput"/>
       <button ng-click="add()">Add</button>
     </div>
 
