@@ -15,20 +15,7 @@ app.controller("MainController", function($scope) {
 
 // repopulates tasks array with only tasks that have .done as true
   $scope.remove = function() {
-    var currentList = $scope.tasks;
-    $scope.tasks = [];
-    currentList.forEach(function(s) {
-      if (!s.done) {
-       $scope.tasks.push(s);
-     }
-  });
-};
-
-  // currentList.forEach(s => !s.done ? $scope.tasks.push(s));  <- why don't you work
-
-
-
-
-
+    $scope.tasks = $scope.tasks.filter(s => !s.done);
+  };
 
 }); // \Main Controller
